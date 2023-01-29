@@ -26,6 +26,9 @@
                             {{ trans('cruds.product.fields.id') }}
                         </th>
                         <th>
+                            {{ trans('cruds.product.fields.preview_featured_image') }}
+                        </th>
+                        <th>
                             {{ trans('cruds.product.fields.api') }}
                         </th>
                         <th>
@@ -176,6 +179,13 @@
                             </td>
                             <td>
                                 {{ $product->id ?? '' }}
+                            </td>
+                            <td>
+                                @if($product->preview_featured_image)
+                                    <a href="{{ $product->preview_featured_image->getUrl() }}" target="_blank" style="display: inline-block">
+                                        <img src="{{ $product->preview_featured_image->getUrl('thumb') }}">
+                                    </a>
+                                @endif
                             </td>
                             <td>
                                 {{ $product->api ?? '' }}
