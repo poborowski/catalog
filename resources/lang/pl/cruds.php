@@ -209,14 +209,12 @@ return [
             'is_personalized_helper'                 => ' ',
             'show_free_sample_btn'                   => 'Darmowe próbki',
             'show_free_sample_btn_helper'            => ' ',
+            'preview_featured_image'                 => 'Preview Featured Image',
+            'preview_featured_image_helper'          => ' ',
         ],
     ],
     'sklep' => [
         'title'          => 'Sklep',
         'title_singular' => 'Sklep',
-    ],
-    'addShopsasd' => [
-        'title'          => 'Add Shopssasd',
-        'title_singular' => 'Add Shopssasd',
     ],
 ];
