@@ -140,7 +140,7 @@ class PermissionsTableSeeder extends Seeder
             ],
             [
                 'id'    => 33,
-                'title' => 'add_shop_access',
+                'title' => 'sklep_access',
             ],
             [
                 'id'    => 34,

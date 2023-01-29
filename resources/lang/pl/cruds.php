@@ -209,10 +209,12 @@ return [
             'is_personalized_helper'                 => ' ',
             'show_free_sample_btn'                   => 'Darmowe próbki',
             'show_free_sample_btn_helper'            => ' ',
+            'preview_featured_image'                 => 'Preview Featured Image',
+            'preview_featured_image_helper'          => ' ',
         ],
     ],
-    'addShop' => [
-        'title'          => 'Add Shop',
-        'title_singular' => 'Add Shop',
+    'sklep' => [
+        'title'          => 'Sklep',
+        'title_singular' => 'Sklep',
     ],
 ];
