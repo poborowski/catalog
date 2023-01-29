@@ -211,8 +211,8 @@ return [
             'show_free_sample_btn_helper'            => ' ',
         ],
     ],
-    'addShop' => [
-        'title'          => 'Add Shop',
-        'title_singular' => 'Add Shop',
+    'sklep' => [
+        'title'          => 'Sklep',
+        'title_singular' => 'Sklep',
     ],
 ];
