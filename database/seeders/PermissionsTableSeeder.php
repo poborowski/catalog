@@ -144,6 +144,26 @@ class PermissionsTableSeeder extends Seeder
             ],
             [
                 'id'    => 34,
+                'title' => 'add_shopsasd_create',
+            ],
+            [
+                'id'    => 35,
+                'title' => 'add_shopsasd_edit',
+            ],
+            [
+                'id'    => 36,
+                'title' => 'add_shopsasd_show',
+            ],
+            [
+                'id'    => 37,
+                'title' => 'add_shopsasd_delete',
+            ],
+            [
+                'id'    => 38,
+                'title' => 'add_shopsasd_access',
+            ],
+            [
+                'id'    => 39,
                 'title' => 'profile_password_edit',
             ],
         ];

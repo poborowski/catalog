@@ -38,6 +38,10 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     // Product
     Route::delete('products/destroy', 'ProductController@massDestroy')->name('products.massDestroy');
     Route::resource('products', 'ProductController');
+
+    // Add Shopsasd
+    Route::delete('add-shopsasds/destroy', 'AddShopsasdController@massDestroy')->name('add-shopsasds.massDestroy');
+    Route::resource('add-shopsasds', 'AddShopsasdController');
 });
 Route::group(['prefix' => 'profile', 'as' => 'profile.', 'namespace' => 'Auth', 'middleware' => ['auth']], function () {
     // Change password

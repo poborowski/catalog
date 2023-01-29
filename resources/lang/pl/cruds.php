@@ -215,4 +215,8 @@ return [
         'title'          => 'Add Shop',
         'title_singular' => 'Add Shop',
     ],
+    'addShopsasd' => [
+        'title'          => 'Add Shopssasd',
+        'title_singular' => 'Add Shopssasd',
+    ],
 ];

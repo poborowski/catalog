@@ -99,6 +99,28 @@
                 </ul>
             </li>
         @endcan
+        @can('add_shop_access')
+            <li class="c-sidebar-nav-dropdown {{ request()->is("admin/add-shopsasds*") ? "c-show" : "" }}">
+                <a class="c-sidebar-nav-dropdown-toggle" href="#">
+                    <i class="fa-fw fas fa-cogs c-sidebar-nav-icon">
+
+                    </i>
+                    {{ trans('cruds.addShop.title') }}
+                </a>
+                <ul class="c-sidebar-nav-dropdown-items">
+                    @can('add_shopsasd_access')
+                        <li class="c-sidebar-nav-item">
+                            <a href="{{ route("admin.add-shopsasds.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/add-shopsasds") || request()->is("admin/add-shopsasds/*") ? "c-active" : "" }}">
+                                <i class="fa-fw fas fa-cogs c-sidebar-nav-icon">
+
+                                </i>
+                                {{ trans('cruds.addShopsasd.title') }}
+                            </a>
+                        </li>
+                    @endcan
+                </ul>
+            </li>
+        @endcan
         @if(file_exists(app_path('Http/Controllers/Auth/ChangePasswordController.php')))
             @can('profile_password_edit')
                 <li class="c-sidebar-nav-item">
