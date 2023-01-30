@@ -45,9 +45,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::delete('add-shops/destroy', 'AddShopController@massDestroy')->name('add-shops.massDestroy');
     Route::resource('add-shops', 'AddShopController');
 
-    // D
-    Route::delete('ds/destroy', 'DController@massDestroy')->name('ds.massDestroy');
-    Route::resource('ds', 'DController');
+    // S
+    Route::delete('s/destroy', 'SController@massDestroy')->name('s.massDestroy');
+    Route::resource('s', 'SController');
 });
 Route::group(['prefix' => 'profile', 'as' => 'profile.', 'namespace' => 'Auth', 'middleware' => ['auth']], function () {
     // Change password
