@@ -140,10 +140,26 @@ class PermissionsTableSeeder extends Seeder
             ],
             [
                 'id'    => 33,
-                'title' => 'sklep_access',
+                'title' => 'add_shop_create',
             ],
             [
                 'id'    => 34,
+                'title' => 'add_shop_edit',
+            ],
+            [
+                'id'    => 35,
+                'title' => 'add_shop_show',
+            ],
+            [
+                'id'    => 36,
+                'title' => 'add_shop_delete',
+            ],
+            [
+                'id'    => 37,
+                'title' => 'add_shop_access',
+            ],
+            [
+                'id'    => 38,
                 'title' => 'profile_password_edit',
             ],
         ];

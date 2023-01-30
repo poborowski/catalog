@@ -213,8 +213,22 @@ return [
             'preview_featured_image_helper'          => ' ',
         ],
     ],
-    'sklep' => [
-        'title'          => 'Sklep',
-        'title_singular' => 'Sklep',
+    'addShop' => [
+        'title'          => 'Add Shop',
+        'title_singular' => 'Add Shop',
+        'fields'         => [
+            'id'                => 'ID',
+            'id_helper'         => ' ',
+            'email'             => 'Email',
+            'email_helper'      => ' ',
+            'password'          => 'Password',
+            'password_helper'   => ' ',
+            'created_at'        => 'Created at',
+            'created_at_helper' => ' ',
+            'updated_at'        => 'Updated at',
+            'updated_at_helper' => ' ',
+            'deleted_at'        => 'Deleted at',
+            'deleted_at_helper' => ' ',
+        ],
     ],
 ];
