@@ -58,7 +58,11 @@
             </li>
         @endcan
         @can('product_management_access')
+
             <li class="c-sidebar-nav-dropdown {{ request()->is("admin/product-tags*") ? "c-show" : "" }} {{ request()->is("admin/product-categories*") ? "c-show" : "" }} {{ request()->is("admin/products*") ? "c-show" : "" }} {{ request()->is("admin/add-shops*") ? "c-show" : "" }}">
+=======
+            <li class="c-sidebar-nav-dropdown {{ request()->is("admin/product-tags*") ? "c-show" : "" }} {{ request()->is("admin/product-categories*") ? "c-show" : "" }} {{ request()->is("admin/products*") ? "c-show" : "" }} {{ request()->is("admin/add-shops*") ? "c-show" : "" }} {{ request()->is("admin/s*") ? "c-show" : "" }}">
+
                 <a class="c-sidebar-nav-dropdown-toggle" href="#">
                     <i class="fa-fw fas fa-shopping-cart c-sidebar-nav-icon">
 
@@ -106,6 +110,18 @@
                             </a>
                         </li>
                     @endcan
+
+                    @can('_access')
+                        <li class="c-sidebar-nav-item">
+                            <a href="{{ route("admin.s.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/s") || request()->is("admin/s/*") ? "c-active" : "" }}">
+                                <i class="fa-fw fas fa-cogs c-sidebar-nav-icon">
+
+                                </i>
+                                {{ trans('cruds..title') }}
+                            </a>
+                        </li>
+                    @endcan
+
                 </ul>
             </li>
         @endcan
