@@ -144,6 +144,26 @@ class PermissionsTableSeeder extends Seeder
             ],
             [
                 'id'    => 34,
+                'title' => 'ddddd_create',
+            ],
+            [
+                'id'    => 35,
+                'title' => 'ddddd_edit',
+            ],
+            [
+                'id'    => 36,
+                'title' => 'ddddd_show',
+            ],
+            [
+                'id'    => 37,
+                'title' => 'ddddd_delete',
+            ],
+            [
+                'id'    => 38,
+                'title' => 'ddddd_access',
+            ],
+            [
+                'id'    => 39,
                 'title' => 'profile_password_edit',
             ],
         ];
