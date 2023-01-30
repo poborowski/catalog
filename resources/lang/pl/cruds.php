@@ -231,9 +231,10 @@ return [
             'deleted_at_helper' => ' ',
         ],
     ],
-    'd' => [
-        'title'          => 'D',
-        'title_singular' => 'D',
+
+    '' => [
+        'title'          => 'S',
+        'title_singular' => '',
         'fields'         => [
             'id'                => 'ID',
             'id_helper'         => ' ',
@@ -249,4 +250,5 @@ return [
             'deleted_at_helper' => ' ',
         ],
     ],
+
 ];
