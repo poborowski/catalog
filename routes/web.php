@@ -41,11 +41,13 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::post('products/ckmedia', 'ProductController@storeCKEditorImages')->name('products.storeCKEditorImages');
     Route::resource('products', 'ProductController');
 
-    // Ddddd
-    Route::delete('ddddds/destroy', 'DddddController@massDestroy')->name('ddddds.massDestroy');
-    Route::post('ddddds/media', 'DddddController@storeMedia')->name('ddddds.storeMedia');
-    Route::post('ddddds/ckmedia', 'DddddController@storeCKEditorImages')->name('ddddds.storeCKEditorImages');
-    Route::resource('ddddds', 'DddddController');
+    // Add Shop
+    Route::delete('add-shops/destroy', 'AddShopController@massDestroy')->name('add-shops.massDestroy');
+    Route::resource('add-shops', 'AddShopController');
+
+    // D
+    Route::delete('ds/destroy', 'DController@massDestroy')->name('ds.massDestroy');
+    Route::resource('ds', 'DController');
 });
 Route::group(['prefix' => 'profile', 'as' => 'profile.', 'namespace' => 'Auth', 'middleware' => ['auth']], function () {
     // Change password
