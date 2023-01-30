@@ -4,11 +4,11 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDsTable extends Migration
+class CreateSTable extends Migration
 {
     public function up()
     {
-        Schema::create('ds', function (Blueprint $table) {
+        Schema::create('s', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('email')->nullable();
             $table->string('password')->nullable();

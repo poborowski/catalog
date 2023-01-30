@@ -160,23 +160,23 @@ class PermissionsTableSeeder extends Seeder
             ],
             [
                 'id'    => 38,
-                'title' => 'd_create',
+                'title' => '_create',
             ],
             [
                 'id'    => 39,
-                'title' => 'd_edit',
+                'title' => '_edit',
             ],
             [
                 'id'    => 40,
-                'title' => 'd_show',
+                'title' => '_show',
             ],
             [
                 'id'    => 41,
-                'title' => 'd_delete',
+                'title' => '_delete',
             ],
             [
                 'id'    => 42,
-                'title' => 'd_access',
+                'title' => '_access',
             ],
             [
                 'id'    => 43,
