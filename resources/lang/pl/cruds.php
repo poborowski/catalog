@@ -231,6 +231,7 @@ return [
             'deleted_at_helper' => ' ',
         ],
     ],
+
     '' => [
         'title'          => 'S',
         'title_singular' => '',
@@ -249,4 +250,5 @@ return [
             'deleted_at_helper' => ' ',
         ],
     ],
+
 ];

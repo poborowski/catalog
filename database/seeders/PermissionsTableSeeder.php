@@ -160,6 +160,7 @@ class PermissionsTableSeeder extends Seeder
             ],
             [
                 'id'    => 38,
+
                 'title' => '_create',
             ],
             [
@@ -180,6 +181,7 @@ class PermissionsTableSeeder extends Seeder
             ],
             [
                 'id'    => 43,
+
                 'title' => 'profile_password_edit',
             ],
         ];
