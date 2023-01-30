@@ -58,7 +58,7 @@
             </li>
         @endcan
         @can('product_management_access')
-            <li class="c-sidebar-nav-dropdown {{ request()->is("admin/product-categories*") ? "c-show" : "" }} {{ request()->is("admin/product-tags*") ? "c-show" : "" }} {{ request()->is("admin/products*") ? "c-show" : "" }} {{ request()->is("admin/ddddds*") ? "c-show" : "" }}">
+            <li class="c-sidebar-nav-dropdown {{ request()->is("admin/product-categories*") ? "c-show" : "" }} {{ request()->is("admin/product-tags*") ? "c-show" : "" }} {{ request()->is("admin/products*") ? "c-show" : "" }} {{ request()->is("admin/add-shops*") ? "c-show" : "" }}">
                 <a class="c-sidebar-nav-dropdown-toggle" href="#">
                     <i class="fa-fw fas fa-shopping-cart c-sidebar-nav-icon">
 
@@ -96,13 +96,13 @@
                             </a>
                         </li>
                     @endcan
-                    @can('ddddd_access')
+                    @can('add_shop_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.ddddds.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/ddddds") || request()->is("admin/ddddds/*") ? "c-active" : "" }}">
-                                <i class="fa-fw fas fa-shopping-cart c-sidebar-nav-icon">
+                            <a href="{{ route("admin.add-shops.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/add-shops") || request()->is("admin/add-shops/*") ? "c-active" : "" }}">
+                                <i class="fa-fw fas fa-cogs c-sidebar-nav-icon">
 
                                 </i>
-                                {{ trans('cruds.ddddd.title') }}
+                                {{ trans('cruds.addShop.title') }}
                             </a>
                         </li>
                     @endcan
