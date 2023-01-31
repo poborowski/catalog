@@ -231,24 +231,4 @@ return [
             'deleted_at_helper' => ' ',
         ],
     ],
-
-    '' => [
-        'title'          => 'S',
-        'title_singular' => '',
-        'fields'         => [
-            'id'                => 'ID',
-            'id_helper'         => ' ',
-            'email'             => 'Email',
-            'email_helper'      => ' ',
-            'password'          => 'Password',
-            'password_helper'   => ' ',
-            'created_at'        => 'Created at',
-            'created_at_helper' => ' ',
-            'updated_at'        => 'Updated at',
-            'updated_at_helper' => ' ',
-            'deleted_at'        => 'Deleted at',
-            'deleted_at_helper' => ' ',
-        ],
-    ],
-
 ];
