@@ -1,6 +1,10 @@
 @extends('layouts.admin')
 @section('content')
-
+<div class="chooseShop">
+    <a href="/first">Pierwszy sklep</a>
+    <a href="/first">Drugi sklep</a>
+    <a href="/first">Trzeci sklep</a>
+</div>
 <div class="card">
     <div class="card-header">
         {{ trans('global.edit') }} {{ trans('cruds.product.title_singular') }}
@@ -8,8 +12,13 @@
 
     <div class="card-body">
         <form method="POST" action="{{ route("admin.products.update", [$product->id]) }}" enctype="multipart/form-data">
+        <div class="accordionsection">
             @method('PUT')
             @csrf
+            <p class="accordion">Core
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="arrowup" ><path fill-rule="evenodd" d="M14.77 12.79a.75.75 0 01-1.06-.02L10 8.832 6.29 12.77a.75.75 0 11-1.08-1.04l4.25-4.5a.75.75 0 011.08 0l4.25 4.5a.75.75 0 01-.02 1.06z" clip-rule="evenodd"></path></svg> 
+</p>
+ <div class="panel">
             <div class="form-group">
                 <label for="preview_featured_image">{{ trans('cruds.product.fields.preview_featured_image') }}</label>
                 <div class="needsclick dropzone {{ $errors->has('preview_featured_image') ? 'is-invalid' : '' }}" id="preview_featured_image-dropzone">
@@ -40,6 +49,7 @@
                     </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.product.fields.product_id_wordpress_helper') }}</span>
+      
             </div>
             <div class="form-group">
                 <label for="product_slug">{{ trans('cruds.product.fields.product_slug') }}</label>
@@ -207,6 +217,11 @@
                 @endif
                 <span class="help-block">{{ trans('cruds.product.fields.owner_helper') }}</span>
             </div>
+            </div>
+            <p class="accordion">DESCRIPTION
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="arrowup" ><path fill-rule="evenodd" d="M14.77 12.79a.75.75 0 01-1.06-.02L10 8.832 6.29 12.77a.75.75 0 11-1.08-1.04l4.25-4.5a.75.75 0 011.08 0l4.25 4.5a.75.75 0 01-.02 1.06z" clip-rule="evenodd"></path></svg> 
+</p>
+            <div class="panel">
             <div class="form-group">
                 <label for="product_name">{{ trans('cruds.product.fields.product_name') }}</label>
                 <input class="form-control {{ $errors->has('product_name') ? 'is-invalid' : '' }}" type="text" name="product_name" id="product_name" value="{{ old('product_name', $product->product_name) }}">
@@ -287,6 +302,12 @@
                 @endif
                 <span class="help-block">{{ trans('cruds.product.fields.tags_helper') }}</span>
             </div>
+            </div>
+   
+            <p class="accordion">DESCRIPTION
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="arrowup" ><path fill-rule="evenodd" d="M14.77 12.79a.75.75 0 01-1.06-.02L10 8.832 6.29 12.77a.75.75 0 11-1.08-1.04l4.25-4.5a.75.75 0 011.08 0l4.25 4.5a.75.75 0 01-.02 1.06z" clip-rule="evenodd"></path></svg> 
+</p>
+            <div class="panel">
             <div class="form-group">
                 <label for="filters_product_style">{{ trans('cruds.product.fields.filters_product_style') }}</label>
                 <input class="form-control {{ $errors->has('filters_product_style') ? 'is-invalid' : '' }}" type="text" name="filters_product_style" id="filters_product_style" value="{{ old('filters_product_style', $product->filters_product_style) }}">
@@ -346,7 +367,12 @@
                     </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.product.fields.filters_product_format_helper') }}</span>
+                </div>
             </div>
+            <p class="accordion">MARKETING
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="arrowup" ><path fill-rule="evenodd" d="M14.77 12.79a.75.75 0 01-1.06-.02L10 8.832 6.29 12.77a.75.75 0 11-1.08-1.04l4.25-4.5a.75.75 0 011.08 0l4.25 4.5a.75.75 0 01-.02 1.06z" clip-rule="evenodd"></path></svg> 
+</p>
+            <div class="panel">
             <div class="form-group">
                 <label for="meta_title">{{ trans('cruds.product.fields.meta_title') }}</label>
                 <input class="form-control {{ $errors->has('meta_title') ? 'is-invalid' : '' }}" type="text" name="meta_title" id="meta_title" value="{{ old('meta_title', $product->meta_title) }}">
@@ -387,6 +413,11 @@
                 @endif
                 <span class="help-block">{{ trans('cruds.product.fields.disable_from_feed_helper') }}</span>
             </div>
+            </div>
+            <p class="accordion">STRUKTURA
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="arrowup" ><path fill-rule="evenodd" d="M14.77 12.79a.75.75 0 01-1.06-.02L10 8.832 6.29 12.77a.75.75 0 11-1.08-1.04l4.25-4.5a.75.75 0 011.08 0l4.25 4.5a.75.75 0 01-.02 1.06z" clip-rule="evenodd"></path></svg> 
+</p>
+            <div class="panel">
             <div class="form-group">
                 <label for="categories">{{ trans('cruds.product.fields.categories') }}</label>
                 <input class="form-control {{ $errors->has('categories') ? 'is-invalid' : '' }}" type="text" name="categories" id="categories" value="{{ old('categories', $product->categories) }}">
@@ -417,6 +448,11 @@
                 @endif
                 <span class="help-block">{{ trans('cruds.product.fields.product_collection_helper') }}</span>
             </div>
+            </div>
+            <p class="accordion">STRUKTURA
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="arrowup" ><path fill-rule="evenodd" d="M14.77 12.79a.75.75 0 01-1.06-.02L10 8.832 6.29 12.77a.75.75 0 11-1.08-1.04l4.25-4.5a.75.75 0 011.08 0l4.25 4.5a.75.75 0 01-.02 1.06z" clip-rule="evenodd"></path></svg> 
+</p>  
+<div class="panel">
             <div class="form-group">
                 <label for="link_to_org_product">{{ trans('cruds.product.fields.link_to_org_product') }}</label>
                 <input class="form-control {{ $errors->has('link_to_org_product') ? 'is-invalid' : '' }}" type="text" name="link_to_org_product" id="link_to_org_product" value="{{ old('link_to_org_product', $product->link_to_org_product) }}">
@@ -487,10 +523,12 @@
                 @endif
                 <span class="help-block">{{ trans('cruds.product.fields.poligrafia_product_source_helper') }}</span>
             </div>
+            </div>
             <div class="form-group">
                 <button class="btn btn-danger" type="submit">
                     {{ trans('global.save') }}
                 </button>
+            </div>
             </div>
         </form>
     </div>
