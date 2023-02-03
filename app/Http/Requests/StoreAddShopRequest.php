@@ -16,11 +16,6 @@ class StoreAddShopRequest extends FormRequest
 
     public function rules()
     {
-        return [
-            'f' => [
-                'string',
-                'nullable',
-            ],
-        ];
+        return [];
     }
 }
