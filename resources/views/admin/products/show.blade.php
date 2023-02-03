@@ -1,6 +1,10 @@
 @extends('layouts.admin')
 @section('content')
-
+<div class="chooseShop">
+    <a href="/first">Pierwszy sklep</a>
+    <a href="/first">Drugi sklep</a>
+    <a href="/first">Trzeci sklep</a>
+</div>
 <div class="card">
     <div class="card-header">
         {{ trans('global.show') }} {{ trans('cruds.product.title') }}
