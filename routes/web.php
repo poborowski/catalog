@@ -39,17 +39,13 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::delete('products/destroy', 'ProductController@massDestroy')->name('products.massDestroy');
     Route::post('products/media', 'ProductController@storeMedia')->name('products.storeMedia');
     Route::post('products/ckmedia', 'ProductController@storeCKEditorImages')->name('products.storeCKEditorImages');
+    Route::post('products/parse-csv-import', 'ProductController@parseCsvImport')->name('products.parseCsvImport');
+    Route::post('products/process-csv-import', 'ProductController@processCsvImport')->name('products.processCsvImport');
     Route::resource('products', 'ProductController');
 
     // Add Shop
     Route::delete('add-shops/destroy', 'AddShopController@massDestroy')->name('add-shops.massDestroy');
     Route::resource('add-shops', 'AddShopController');
-
-
-    // S
-    Route::delete('s/destroy', 'SController@massDestroy')->name('s.massDestroy');
-    Route::resource('s', 'SController');
-
 });
 Route::group(['prefix' => 'profile', 'as' => 'profile.', 'namespace' => 'Auth', 'middleware' => ['auth']], function () {
     // Change password
