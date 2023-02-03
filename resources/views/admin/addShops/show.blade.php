@@ -39,6 +39,14 @@
                             ********
                         </td>
                     </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.addShop.fields.f') }}
+                        </th>
+                        <td>
+                            {{ $addShop->f }}
+                        </td>
+                    </tr>
                 </tbody>
             </table>
             <div class="form-group">
