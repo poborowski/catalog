@@ -91,3 +91,17 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+
+
+
+
+var inputs = document.querySelectorAll(".editProduct input[type='text']");
+for (var i = 0; i < inputs.length; i++) {
+  inputs[i].addEventListener("input", function () {
+    if (this.value.length > 0) {
+      this.classList.add("active");
+    } else {
+      this.classList.remove("active");
+    }
+  });
+}

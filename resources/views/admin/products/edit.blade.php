@@ -5,7 +5,7 @@
     <a href="/first">Drugi sklep</a>
     <a href="/first">Trzeci sklep</a>
 </div>
-<div class="card">
+<div class="card editProduct">
     <div class="card-header">
         {{ trans('global.edit') }} {{ trans('cruds.product.title_singular') }}
     </div>
@@ -524,11 +524,14 @@
                 <span class="help-block">{{ trans('cruds.product.fields.poligrafia_product_source_helper') }}</span>
             </div>
             </div>
-            <div class="form-group">
+
+            </div>
+            <div class="form-group saveproduct">
+                <div class="fixedbutton">
                 <button class="btn btn-danger" type="submit">
                     {{ trans('global.save') }}
                 </button>
-            </div>
+                </div>
             </div>
         </form>
     </div>
