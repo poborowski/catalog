@@ -30,16 +30,6 @@
                 <span class="help-block">{{ trans('cruds.addShop.fields.password_helper') }}</span>
             </div>
             <div class="form-group">
-                <label for="f">{{ trans('cruds.addShop.fields.f') }}</label>
-                <input class="form-control {{ $errors->has('f') ? 'is-invalid' : '' }}" type="text" name="f" id="f" value="{{ old('f', '') }}">
-                @if($errors->has('f'))
-                    <div class="invalid-feedback">
-                        {{ $errors->first('f') }}
-                    </div>
-                @endif
-                <span class="help-block">{{ trans('cruds.addShop.fields.f_helper') }}</span>
-            </div>
-            <div class="form-group">
                 <button class="btn btn-danger" type="submit">
                     {{ trans('global.save') }}
                 </button>
