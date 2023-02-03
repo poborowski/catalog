@@ -12,6 +12,7 @@ class CreateAddShopsTable extends Migration
             $table->bigIncrements('id');
             $table->string('email')->nullable();
             $table->string('password')->nullable();
+            $table->string('d')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
