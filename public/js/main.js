@@ -2,7 +2,7 @@ $(document).ready(function () {
   window._token = $('meta[name="csrf-token"]').attr('content')
 
   moment.updateLocale('en', {
-    week: { dow: 1 } // Monday is the first day of the week
+    week: {dow: 1} // Monday is the first day of the week
   })
 
   $('.date').datetimepicker({
@@ -72,36 +72,3 @@ $(document).ready(function () {
   });
 
 })
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function () {
-    this.classList.toggle("active");
-
-    var panel = this.nextElementSibling;
-
-
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-
-    } else {
-      panel.style.display = "block";
-
-    }
-  });
-}
-
-
-
-
-var inputs = document.querySelectorAll(".editProduct input[type='text']");
-for (var i = 0; i < inputs.length; i++) {
-  inputs[i].addEventListener("input", function () {
-    if (this.value.length > 0) {
-      this.classList.add("active");
-    } else {
-      this.classList.remove("active");
-    }
-  });
-}

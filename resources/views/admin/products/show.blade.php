@@ -1,10 +1,6 @@
 @extends('layouts.admin')
 @section('content')
-<div class="chooseShop">
-    <a href="/first">Pierwszy sklep</a>
-    <a href="/first">Drugi sklep</a>
-    <a href="/first">Trzeci sklep</a>
-</div>
+
 <div class="card">
     <div class="card-header">
         {{ trans('global.show') }} {{ trans('cruds.product.title') }}
@@ -25,18 +21,6 @@
                         </th>
                         <td>
                             {{ $product->id }}
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>
-                            {{ trans('cruds.product.fields.preview_featured_image') }}
-                        </th>
-                        <td>
-                            @if($product->preview_featured_image)
-                                <a href="{{ $product->preview_featured_image->getUrl() }}" target="_blank" style="display: inline-block">
-                                    <img src="{{ $product->preview_featured_image->getUrl('thumb') }}">
-                                </a>
-                            @endif
                         </td>
                     </tr>
                     <tr>
@@ -405,6 +389,38 @@
                         </th>
                         <td>
                             {{ $product->poligrafia_product_source }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.product.fields.actual_product_url') }}
+                        </th>
+                        <td>
+                            {{ $product->actual_product_url }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.product.fields.featured_img') }}
+                        </th>
+                        <td>
+                            {{ $product->featured_img }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.product.fields.preview_featured_image') }}
+                        </th>
+                        <td>
+                            {{ $product->preview_featured_image }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.product.fields.contact_filters_products_decoration') }}
+                        </th>
+                        <td>
+                            {{ $product->contact_filters_products_decoration }}
                         </td>
                     </tr>
                 </tbody>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Traits\CsvImportTrait;
 use App\Http\Controllers\Traits\MediaUploadingTrait;
+
 use App\Http\Requests\MassDestroyProductRequest;
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
@@ -12,19 +13,20 @@ use App\Http\Requests\UpdateProductRequest;
 use App\Models\Product;
 use Gate;
 use Illuminate\Http\Request;
-use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Symfony\Component\HttpFoundation\Response;
 
 class ProductController extends Controller
 {
+
     use MediaUploadingTrait;
+
     use CsvImportTrait;
 
     public function index()
     {
         abort_if(Gate::denies('product_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $products = Product::with(['media'])->get();
+        $products = Product::all();
 
         return view('admin.products.index', compact('products'));
     }
@@ -40,14 +42,6 @@ class ProductController extends Controller
     {
         $product = Product::create($request->all());
 
-        if ($request->input('preview_featured_image', false)) {
-            $product->addMedia(storage_path('tmp/uploads/' . basename($request->input('preview_featured_image'))))->toMediaCollection('preview_featured_image');
-        }
-
-        if ($media = $request->input('ck-media', false)) {
-            Media::whereIn('id', $media)->update(['model_id' => $product->id]);
-        }
-
         return redirect()->route('admin.products.index');
     }
 
@@ -61,17 +55,6 @@ class ProductController extends Controller
     public function update(UpdateProductRequest $request, Product $product)
     {
         $product->update($request->all());
-
-        if ($request->input('preview_featured_image', false)) {
-            if (!$product->preview_featured_image || $request->input('preview_featured_image') !== $product->preview_featured_image->file_name) {
-                if ($product->preview_featured_image) {
-                    $product->preview_featured_image->delete();
-                }
-                $product->addMedia(storage_path('tmp/uploads/' . basename($request->input('preview_featured_image'))))->toMediaCollection('preview_featured_image');
-            }
-        } elseif ($product->preview_featured_image) {
-            $product->preview_featured_image->delete();
-        }
 
         return redirect()->route('admin.products.index');
     }
@@ -97,17 +80,5 @@ class ProductController extends Controller
         Product::whereIn('id', request('ids'))->delete();
 
         return response(null, Response::HTTP_NO_CONTENT);
-    }
-
-    public function storeCKEditorImages(Request $request)
-    {
-        abort_if(Gate::denies('product_create') && Gate::denies('product_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-
-        $model         = new Product();
-        $model->id     = $request->input('crud_id', 0);
-        $model->exists = true;
-        $media         = $model->addMediaFromRequest('upload')->toMediaCollection('ck-media');
-
-        return response()->json(['id' => $media->id, 'url' => $media->getUrl()], Response::HTTP_CREATED);
     }
 }

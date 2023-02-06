@@ -30,9 +30,6 @@
                             {{ trans('cruds.product.fields.id') }}
                         </th>
                         <th>
-                            {{ trans('cruds.product.fields.preview_featured_image') }}
-                        </th>
-                        <th>
                             {{ trans('cruds.product.fields.api') }}
                         </th>
                         <th>
@@ -171,6 +168,18 @@
                             {{ trans('cruds.product.fields.poligrafia_product_source') }}
                         </th>
                         <th>
+                            {{ trans('cruds.product.fields.actual_product_url') }}
+                        </th>
+                        <th>
+                            {{ trans('cruds.product.fields.featured_img') }}
+                        </th>
+                        <th>
+                            {{ trans('cruds.product.fields.preview_featured_image') }}
+                        </th>
+                        <th>
+                            {{ trans('cruds.product.fields.contact_filters_products_decoration') }}
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -183,13 +192,6 @@
                             </td>
                             <td>
                                 {{ $product->id ?? '' }}
-                            </td>
-                            <td>
-                                @if($product->preview_featured_image)
-                                    <a href="{{ $product->preview_featured_image->getUrl() }}" target="_blank" style="display: inline-block">
-                                        <img src="{{ $product->preview_featured_image->getUrl('thumb') }}">
-                                    </a>
-                                @endif
                             </td>
                             <td>
                                 {{ $product->api ?? '' }}
@@ -330,6 +332,18 @@
                             </td>
                             <td>
                                 {{ $product->poligrafia_product_source ?? '' }}
+                            </td>
+                            <td>
+                                {{ $product->actual_product_url ?? '' }}
+                            </td>
+                            <td>
+                                {{ $product->featured_img ?? '' }}
+                            </td>
+                            <td>
+                                {{ $product->preview_featured_image ?? '' }}
+                            </td>
+                            <td>
+                                {{ $product->contact_filters_products_decoration ?? '' }}
                             </td>
                             <td>
                                 @can('product_show')
