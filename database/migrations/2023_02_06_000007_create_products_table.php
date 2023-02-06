@@ -60,7 +60,6 @@ class CreateProductsTable extends Migration
             $table->string('featured_img')->nullable();
             $table->string('preview_featured_image')->nullable();
             $table->string('contact_filters_products_decoration')->nullable();
-            $table->string('delete')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

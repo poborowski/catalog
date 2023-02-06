@@ -71,7 +71,6 @@ class Product extends Model
         'featured_img',
         'preview_featured_image',
         'contact_filters_products_decoration',
-        'delete',
         'created_at',
         'updated_at',
         'deleted_at',

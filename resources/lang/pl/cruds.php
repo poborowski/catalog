@@ -217,8 +217,6 @@ return [
             'preview_featured_image_helper'              => ' ',
             'contact_filters_products_decoration'        => 'contact_filters_products_decoration',
             'contact_filters_products_decoration_helper' => ' ',
-            'delete'                                     => 'Delete',
-            'delete_helper'                              => ' ',
         ],
     ],
     'addShop' => [

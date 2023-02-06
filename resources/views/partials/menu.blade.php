@@ -58,7 +58,7 @@
             </li>
         @endcan
         @can('product_management_access')
-            <li class="c-sidebar-nav-dropdown {{ request()->is("admin/product-tags*") ? "c-show" : "" }} {{ request()->is("admin/product-categories*") ? "c-show" : "" }} {{ request()->is("admin/products*") ? "c-show" : "" }} {{ request()->is("admin/add-shops*") ? "c-show" : "" }}">
+            <li class="c-sidebar-nav-dropdown {{ request()->is("admin/product-categories*") ? "c-show" : "" }} {{ request()->is("admin/product-tags*") ? "c-show" : "" }} {{ request()->is("admin/products*") ? "c-show" : "" }}">
                 <a class="c-sidebar-nav-dropdown-toggle" href="#">
                     <i class="fa-fw fas fa-shopping-cart c-sidebar-nav-icon">
 
@@ -111,13 +111,64 @@
         @endcan
         @if(file_exists(app_path('Http/Controllers/Auth/ChangePasswordController.php')))
             @can('profile_password_edit')
+
+
+        <li
+            class="c-sidebar-nav-dropdown {{ request()->is("admin/product-tags*") ? "c-show" : "" }} {{ request()->is("admin/product-categories*") ? "c-show" : "" }} {{ request()->is("admin/products*") ? "c-show" : "" }} {{ request()->is("admin/add-shops*") ? "c-show" : "" }}">
+
+        <li
+            class="c-sidebar-nav-dropdown {{ request()->is("admin/product-tags*") ? "c-show" : "" }} {{ request()->is("admin/product-categories*") ? "c-show" : "" }} {{ request()->is("admin/products*") ? "c-show" : "" }} {{ request()->is("admin/add-shops*") ? "c-show" : "" }} {{ request()->is("admin/s*") ? "c-show" : "" }}">
+
+            <a class="c-sidebar-nav-dropdown-toggle" href="#">
+                <i class="fa-fw fas fa-shopping-cart c-sidebar-nav-icon">
+
+                </i>
+                {{ trans('cruds.productManagement.title') }}
+            </a>
+            <ul class="c-sidebar-nav-dropdown-items">
+                @can('product_tag_access')
                 <li class="c-sidebar-nav-item">
                     <a class="c-sidebar-nav-link {{ request()->is('profile/password') || request()->is('profile/password/*') ? 'c-active' : '' }}" href="{{ route('profile.password.edit') }}">
                         <i class="fa-fw fas fa-key c-sidebar-nav-icon">
                         </i>
-                        {{ trans('global.change_password') }}
+                        {{ trans('cruds.productTag.title') }}
                     </a>
                 </li>
+                @endcan
+                @can('product_category_access')
+                <li class="c-sidebar-nav-item">
+                    <a href="{{ route("admin.product-categories.index") }}"
+                        class="c-sidebar-nav-link {{ request()->is("admin/product-categories") || request()->is("admin/product-categories/*") ? "c-active" : "" }}">
+                        <i class="fa-fw fas fa-folder c-sidebar-nav-icon">
+
+                        </i>
+                        {{ trans('cruds.productCategory.title') }}
+                    </a>
+                </li>
+                @endcan
+                @can('product_access')
+
+                <li class="c-sidebar-nav-item">
+                    <a href="{{ route("admin.products.index") }}"
+                        class="c-sidebar-nav-link {{ request()->is("admin/products") || request()->is("admin/products/*") ? "c-active" : "" }}">
+                        <i class="fa-fw fas fa-shopping-cart c-sidebar-nav-icon">
+
+                        </i>
+                        {{ trans('cruds.product.title') }}
+                    </a>
+                </li>
+                @endcan
+                @can('add_shop_access')
+                <li class="c-sidebar-nav-item">
+                    <a href="{{ route("admin.add-shops.index") }}"
+                        class="c-sidebar-nav-link {{ request()->is("admin/add-shops") || request()->is("admin/add-shops/*") ? "c-active" : "" }}">
+                        <i class="fa-fw fas fa-cogs c-sidebar-nav-icon">
+
+                        </i>
+                        {{ trans('cruds.addShop.title') }}
+                    </a>
+                </li>
+
             @endcan
         @endif
         <li class="c-sidebar-nav-item">
