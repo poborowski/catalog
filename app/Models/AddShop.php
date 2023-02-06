@@ -27,7 +27,7 @@ class AddShop extends Model
     protected $fillable = [
         'email',
         'password',
-        'd',
+        'sd',
         'created_at',
         'updated_at',
         'deleted_at',

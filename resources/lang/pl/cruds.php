@@ -217,6 +217,8 @@ return [
             'preview_featured_image_helper'              => ' ',
             'contact_filters_products_decoration'        => 'contact_filters_products_decoration',
             'contact_filters_products_decoration_helper' => ' ',
+            'delete'                                     => 'Delete',
+            'delete_helper'                              => ' ',
         ],
     ],
     'addShop' => [
@@ -235,8 +237,8 @@ return [
             'updated_at_helper' => ' ',
             'deleted_at'        => 'Deleted at',
             'deleted_at_helper' => ' ',
-            'd'                 => 'D',
-            'd_helper'          => ' ',
+            'sd'                => 'Sd',
+            'sd_helper'         => ' ',
         ],
     ],
 ];

@@ -29,7 +29,7 @@
                             {{ trans('cruds.addShop.fields.email') }}
                         </th>
                         <th>
-                            {{ trans('cruds.addShop.fields.d') }}
+                            {{ trans('cruds.addShop.fields.sd') }}
                         </th>
                         <th>
                             &nbsp;
@@ -49,7 +49,7 @@
                                 {{ $addShop->email ?? '' }}
                             </td>
                             <td>
-                                {{ $addShop->d ?? '' }}
+                                {{ $addShop->sd ?? '' }}
                             </td>
                             <td>
                                 @can('add_shop_show')
