@@ -30,6 +30,18 @@
                             {{ trans('cruds.product.fields.id') }}
                         </th>
                         <th>
+                            {{ trans('cruds.product.fields.actual_product_url') }}
+                        </th>
+                        <th>
+                            {{ trans('cruds.product.fields.preview_featured_image') }}
+                        </th>
+                        <th>
+                            {{ trans('cruds.product.fields.contact_filters_products_decoration') }}
+                        </th>
+                        <th>
+                            {{ trans('cruds.product.fields.featured_img') }}
+                        </th>
+                        <th>
                             {{ trans('cruds.product.fields.api') }}
                         </th>
                         <th>
@@ -168,16 +180,7 @@
                             {{ trans('cruds.product.fields.poligrafia_product_source') }}
                         </th>
                         <th>
-                            {{ trans('cruds.product.fields.actual_product_url') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.product.fields.featured_img') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.product.fields.preview_featured_image') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.product.fields.contact_filters_products_decoration') }}
+                            {{ trans('cruds.product.fields.delete') }}
                         </th>
                         <th>
                             {{ trans('cruds.product.fields.delete') }}
@@ -200,6 +203,18 @@
                             </td>
                             <td>
                                 {{ $product->id ?? '' }}
+                            </td>
+                            <td>
+                                {{ $product->actual_product_url ?? '' }}
+                            </td>
+                            <td>
+                                {{ $product->preview_featured_image ?? '' }}
+                            </td>
+                            <td>
+                                {{ $product->contact_filters_products_decoration ?? '' }}
+                            </td>
+                            <td>
+                                {{ $product->featured_img ?? '' }}
                             </td>
                             <td>
                                 {{ $product->api ?? '' }}
@@ -342,16 +357,7 @@
                                 {{ $product->poligrafia_product_source ?? '' }}
                             </td>
                             <td>
-                                {{ $product->actual_product_url ?? '' }}
-                            </td>
-                            <td>
-                                {{ $product->featured_img ?? '' }}
-                            </td>
-                            <td>
-                                {{ $product->preview_featured_image ?? '' }}
-                            </td>
-                            <td>
-                                {{ $product->contact_filters_products_decoration ?? '' }}
+                                {{ $product->delete ?? '' }}
                             </td>
                             <td>
                                 {{ $product->delete ?? '' }}

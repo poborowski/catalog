@@ -25,6 +25,38 @@
                     </tr>
                     <tr>
                         <th>
+                            {{ trans('cruds.product.fields.actual_product_url') }}
+                        </th>
+                        <td>
+                            {{ $product->actual_product_url }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.product.fields.preview_featured_image') }}
+                        </th>
+                        <td>
+                            {{ $product->preview_featured_image }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.product.fields.contact_filters_products_decoration') }}
+                        </th>
+                        <td>
+                            {{ $product->contact_filters_products_decoration }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.product.fields.featured_img') }}
+                        </th>
+                        <td>
+                            {{ $product->featured_img }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
                             {{ trans('cruds.product.fields.api') }}
                         </th>
                         <td>
@@ -393,34 +425,10 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.product.fields.actual_product_url') }}
+                            {{ trans('cruds.product.fields.delete') }}
                         </th>
                         <td>
-                            {{ $product->actual_product_url }}
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>
-                            {{ trans('cruds.product.fields.featured_img') }}
-                        </th>
-                        <td>
-                            {{ $product->featured_img }}
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>
-                            {{ trans('cruds.product.fields.preview_featured_image') }}
-                        </th>
-                        <td>
-                            {{ $product->preview_featured_image }}
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>
-                            {{ trans('cruds.product.fields.contact_filters_products_decoration') }}
-                        </th>
-                        <td>
-                            {{ $product->contact_filters_products_decoration }}
+                            {{ $product->delete }}
                         </td>
                     </tr>
                 </tbody>
