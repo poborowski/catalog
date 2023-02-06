@@ -88,7 +88,7 @@ table.dataTable thead .sorting_desc {
     border-color: #d1dbe1;
 }
 
-.btn-group-xs > .btn,
+.btn-group-xs>.btn,
 .btn-xs {
     padding: 1px 5px;
     font-size: 12px;
@@ -99,16 +99,20 @@ table.dataTable thead .sorting_desc {
 .searchable-title {
     font-weight: bold;
 }
+
 .searchable-fields {
-    padding-left:5px;
+    padding-left: 5px;
 }
+
 .searchable-link {
-    padding:0 5px 0 5px;
+    padding: 0 5px 0 5px;
 }
-.searchable-link:hover   {
+
+.searchable-link:hover {
     cursor: pointer;
     background: #eaeaea;
 }
+
 .select2-results__option {
     padding-left: 0px;
     padding-right: 0px;
@@ -119,7 +123,7 @@ table.dataTable thead .sorting_desc {
     color: red;
 }
 
-.form-check.is-invalid ~ .invalid-feedback {
+.form-check.is-invalid~.invalid-feedback {
     display: block;
 }
 
@@ -129,4 +133,76 @@ table.dataTable thead .sorting_desc {
 
 .custom-select.form-control-sm {
     padding: 0.25rem 1.5rem;
+}
+
+.chooseShop a {
+    text-transform: uppercase;
+    color: #302836;
+    font-weight: 700;
+    line-height: 19px;
+    font-size: 15px;
+    font-family: inherit;
+    padding: 16px 20px 21px 20px;
+    margin: 0;
+    border: 0;
+    background-color: #fff;
+    border-bottom: 1px solid #dbdadc;
+    cursor: pointer;
+
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+    border: 1px solid #dbdadc;
+    border-bottom: 0;
+}
+
+.chooseShop a:hover {
+    background: #302836;
+    color: white;
+}
+
+.editProduct form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.editProduct .accordionsection {
+    width: 90%;
+}
+
+.editProduct .saveproduct {
+    width: 10%;
+}
+
+.editProduct .saveproduct button {
+
+    width: 100%;
+    background-color: green;
+    border: 1px solid green;
+}
+
+.form-control:focus {
+    border: 1px solid grey !important;
+    box-shadow: unset !important;
+}
+
+
+.editProduct .form-group .active {
+    background-color: #0080004d;
+    color: black;
+}
+
+.logob2wed {
+    margin-bottom: 20px;
+}
+
+#sidebar {
+    background-color: #302836;
+}
+
+.accordion {
+    color: #302836;
+}
+
+.saveproduct .fixedbutton {
+    position: fixed;
 }

@@ -118,6 +118,7 @@
                         {{ trans('global.change_password') }}
                     </a>
                 </li>
+
             @endcan
         @endif
         <li class="c-sidebar-nav-item">

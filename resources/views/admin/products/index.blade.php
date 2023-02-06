@@ -183,6 +183,14 @@
                             {{ trans('cruds.product.fields.delete') }}
                         </th>
                         <th>
+                            {{ trans('cruds.product.fields.delete') }}
+                        </th>
+                        <th>
+
+                            {{ trans('cruds.product.fields.delete') }}
+                        </th>
+                        <th>
+
                             &nbsp;
                         </th>
                     </tr>
@@ -352,6 +360,14 @@
                                 {{ $product->delete ?? '' }}
                             </td>
                             <td>
+                                {{ $product->delete ?? '' }}
+                            </td>
+                            <td>
+
+                                {{ $product->delete ?? '' }}
+                            </td>
+                            <td>
+
                                 @can('product_show')
                                     <a class="btn btn-xs btn-primary" href="{{ route('admin.products.show', $product->id) }}">
                                         {{ trans('global.view') }}
