@@ -431,6 +431,7 @@
                             {{ $product->delete }}
                         </td>
                     </tr>
+
                 </tbody>
             </table>
             <div class="form-group">

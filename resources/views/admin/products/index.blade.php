@@ -180,9 +180,11 @@
                             {{ trans('cruds.product.fields.contact_filters_products_decoration') }}
                         </th>
                         <th>
+
                             {{ trans('cruds.product.fields.delete') }}
                         </th>
                         <th>
+
                             &nbsp;
                         </th>
                     </tr>
@@ -349,9 +351,11 @@
                                 {{ $product->contact_filters_products_decoration ?? '' }}
                             </td>
                             <td>
+
                                 {{ $product->delete ?? '' }}
                             </td>
                             <td>
+
                                 @can('product_show')
                                     <a class="btn btn-xs btn-primary" href="{{ route('admin.products.show', $product->id) }}">
                                         {{ trans('global.view') }}

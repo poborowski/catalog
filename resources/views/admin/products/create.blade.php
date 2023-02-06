@@ -516,6 +516,7 @@
                 <span class="help-block">{{ trans('cruds.product.fields.contact_filters_products_decoration_helper') }}</span>
             </div>
             <div class="form-group">
+
                 <label for="delete">{{ trans('cruds.product.fields.delete') }}</label>
                 <input class="form-control {{ $errors->has('delete') ? 'is-invalid' : '' }}" type="text" name="delete" id="delete" value="{{ old('delete', '') }}">
                 @if($errors->has('delete'))
@@ -526,6 +527,7 @@
                 <span class="help-block">{{ trans('cruds.product.fields.delete_helper') }}</span>
             </div>
             <div class="form-group">
+
                 <button class="btn btn-danger" type="submit">
                     {{ trans('global.save') }}
                 </button>

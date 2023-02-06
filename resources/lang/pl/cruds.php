@@ -219,6 +219,7 @@ return [
             'contact_filters_products_decoration_helper' => ' ',
             'delete'                                     => 'Delete',
             'delete_helper'                              => ' ',
+
         ],
     ],
     'addShop' => [

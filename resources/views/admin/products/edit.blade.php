@@ -495,6 +495,7 @@
                     </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.product.fields.featured_img_helper') }}</span>
+
             </div>
             <div class="form-group">
                 <label for="preview_featured_image">{{ trans('cruds.product.fields.preview_featured_image') }}</label>
@@ -527,6 +528,30 @@
                 <span class="help-block">{{ trans('cruds.product.fields.delete_helper') }}</span>
             </div>
             <div class="form-group">
+
+            </div>
+            <div class="form-group">
+                <label for="preview_featured_image">{{ trans('cruds.product.fields.preview_featured_image') }}</label>
+                <input class="form-control {{ $errors->has('preview_featured_image') ? 'is-invalid' : '' }}" type="text" name="preview_featured_image" id="preview_featured_image" value="{{ old('preview_featured_image', $product->preview_featured_image) }}">
+                @if($errors->has('preview_featured_image'))
+                    <div class="invalid-feedback">
+                        {{ $errors->first('preview_featured_image') }}
+                    </div>
+                @endif
+                <span class="help-block">{{ trans('cruds.product.fields.preview_featured_image_helper') }}</span>
+            </div>
+            <div class="form-group">
+                <label for="contact_filters_products_decoration">{{ trans('cruds.product.fields.contact_filters_products_decoration') }}</label>
+                <input class="form-control {{ $errors->has('contact_filters_products_decoration') ? 'is-invalid' : '' }}" type="text" name="contact_filters_products_decoration" id="contact_filters_products_decoration" value="{{ old('contact_filters_products_decoration', $product->contact_filters_products_decoration) }}">
+                @if($errors->has('contact_filters_products_decoration'))
+                    <div class="invalid-feedback">
+                        {{ $errors->first('contact_filters_products_decoration') }}
+                    </div>
+                @endif
+                <span class="help-block">{{ trans('cruds.product.fields.contact_filters_products_decoration_helper') }}</span>
+            </div>
+            <div class="form-group">
+
                 <button class="btn btn-danger" type="submit">
                     {{ trans('global.save') }}
                 </button>
