@@ -10,6 +10,10 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('actual_product_url')->nullable();
+            $table->string('preview_featured_image')->nullable();
+            $table->string('contact_filters_products_decoration')->nullable();
+            $table->string('featured_img')->nullable();
             $table->integer('api')->nullable();
             $table->string('product_id_wordpress')->nullable();
             $table->string('product_slug')->nullable();
@@ -56,13 +60,7 @@ class CreateProductsTable extends Migration
             $table->string('poligrafia_creator_type')->nullable();
             $table->string('poligrafia_product_code_antigro')->nullable();
             $table->string('poligrafia_product_source')->nullable();
-            $table->string('actual_product_url')->nullable();
-            $table->string('featured_img')->nullable();
-            $table->string('preview_featured_image')->nullable();
-            $table->string('contact_filters_products_decoration')->nullable();
-
             $table->string('delete')->nullable();
-
             $table->timestamps();
             $table->softDeletes();
         });

@@ -11,6 +11,46 @@
             @method('PUT')
             @csrf
             <div class="form-group">
+                <label for="actual_product_url">{{ trans('cruds.product.fields.actual_product_url') }}</label>
+                <input class="form-control {{ $errors->has('actual_product_url') ? 'is-invalid' : '' }}" type="text" name="actual_product_url" id="actual_product_url" value="{{ old('actual_product_url', $product->actual_product_url) }}">
+                @if($errors->has('actual_product_url'))
+                    <div class="invalid-feedback">
+                        {{ $errors->first('actual_product_url') }}
+                    </div>
+                @endif
+                <span class="help-block">{{ trans('cruds.product.fields.actual_product_url_helper') }}</span>
+            </div>
+            <div class="form-group">
+                <label for="preview_featured_image">{{ trans('cruds.product.fields.preview_featured_image') }}</label>
+                <input class="form-control {{ $errors->has('preview_featured_image') ? 'is-invalid' : '' }}" type="text" name="preview_featured_image" id="preview_featured_image" value="{{ old('preview_featured_image', $product->preview_featured_image) }}">
+                @if($errors->has('preview_featured_image'))
+                    <div class="invalid-feedback">
+                        {{ $errors->first('preview_featured_image') }}
+                    </div>
+                @endif
+                <span class="help-block">{{ trans('cruds.product.fields.preview_featured_image_helper') }}</span>
+            </div>
+            <div class="form-group">
+                <label for="contact_filters_products_decoration">{{ trans('cruds.product.fields.contact_filters_products_decoration') }}</label>
+                <input class="form-control {{ $errors->has('contact_filters_products_decoration') ? 'is-invalid' : '' }}" type="text" name="contact_filters_products_decoration" id="contact_filters_products_decoration" value="{{ old('contact_filters_products_decoration', $product->contact_filters_products_decoration) }}">
+                @if($errors->has('contact_filters_products_decoration'))
+                    <div class="invalid-feedback">
+                        {{ $errors->first('contact_filters_products_decoration') }}
+                    </div>
+                @endif
+                <span class="help-block">{{ trans('cruds.product.fields.contact_filters_products_decoration_helper') }}</span>
+            </div>
+            <div class="form-group">
+                <label for="featured_img">{{ trans('cruds.product.fields.featured_img') }}</label>
+                <input class="form-control {{ $errors->has('featured_img') ? 'is-invalid' : '' }}" type="text" name="featured_img" id="featured_img" value="{{ old('featured_img', $product->featured_img) }}">
+                @if($errors->has('featured_img'))
+                    <div class="invalid-feedback">
+                        {{ $errors->first('featured_img') }}
+                    </div>
+                @endif
+                <span class="help-block">{{ trans('cruds.product.fields.featured_img_helper') }}</span>
+            </div>
+            <div class="form-group">
                 <label for="api">{{ trans('cruds.product.fields.api') }}</label>
                 <input class="form-control {{ $errors->has('api') ? 'is-invalid' : '' }}" type="number" name="api" id="api" value="{{ old('api', $product->api) }}" step="1">
                 @if($errors->has('api'))
@@ -477,47 +517,6 @@
                 <span class="help-block">{{ trans('cruds.product.fields.poligrafia_product_source_helper') }}</span>
             </div>
             <div class="form-group">
-                <label for="actual_product_url">{{ trans('cruds.product.fields.actual_product_url') }}</label>
-                <input class="form-control {{ $errors->has('actual_product_url') ? 'is-invalid' : '' }}" type="text" name="actual_product_url" id="actual_product_url" value="{{ old('actual_product_url', $product->actual_product_url) }}">
-                @if($errors->has('actual_product_url'))
-                    <div class="invalid-feedback">
-                        {{ $errors->first('actual_product_url') }}
-                    </div>
-                @endif
-                <span class="help-block">{{ trans('cruds.product.fields.actual_product_url_helper') }}</span>
-            </div>
-            <div class="form-group">
-                <label for="featured_img">{{ trans('cruds.product.fields.featured_img') }}</label>
-                <input class="form-control {{ $errors->has('featured_img') ? 'is-invalid' : '' }}" type="text" name="featured_img" id="featured_img" value="{{ old('featured_img', $product->featured_img) }}">
-                @if($errors->has('featured_img'))
-                    <div class="invalid-feedback">
-                        {{ $errors->first('featured_img') }}
-                    </div>
-                @endif
-                <span class="help-block">{{ trans('cruds.product.fields.featured_img_helper') }}</span>
-
-            </div>
-            <div class="form-group">
-                <label for="preview_featured_image">{{ trans('cruds.product.fields.preview_featured_image') }}</label>
-                <input class="form-control {{ $errors->has('preview_featured_image') ? 'is-invalid' : '' }}" type="text" name="preview_featured_image" id="preview_featured_image" value="{{ old('preview_featured_image', $product->preview_featured_image) }}">
-                @if($errors->has('preview_featured_image'))
-                    <div class="invalid-feedback">
-                        {{ $errors->first('preview_featured_image') }}
-                    </div>
-                @endif
-                <span class="help-block">{{ trans('cruds.product.fields.preview_featured_image_helper') }}</span>
-            </div>
-            <div class="form-group">
-                <label for="contact_filters_products_decoration">{{ trans('cruds.product.fields.contact_filters_products_decoration') }}</label>
-                <input class="form-control {{ $errors->has('contact_filters_products_decoration') ? 'is-invalid' : '' }}" type="text" name="contact_filters_products_decoration" id="contact_filters_products_decoration" value="{{ old('contact_filters_products_decoration', $product->contact_filters_products_decoration) }}">
-                @if($errors->has('contact_filters_products_decoration'))
-                    <div class="invalid-feedback">
-                        {{ $errors->first('contact_filters_products_decoration') }}
-                    </div>
-                @endif
-                <span class="help-block">{{ trans('cruds.product.fields.contact_filters_products_decoration_helper') }}</span>
-            </div>
-            <div class="form-group">
                 <label for="delete">{{ trans('cruds.product.fields.delete') }}</label>
                 <input class="form-control {{ $errors->has('delete') ? 'is-invalid' : '' }}" type="text" name="delete" id="delete" value="{{ old('delete', $product->delete) }}">
                 @if($errors->has('delete'))
@@ -528,30 +527,6 @@
                 <span class="help-block">{{ trans('cruds.product.fields.delete_helper') }}</span>
             </div>
             <div class="form-group">
-
-            </div>
-            <div class="form-group">
-                <label for="preview_featured_image">{{ trans('cruds.product.fields.preview_featured_image') }}</label>
-                <input class="form-control {{ $errors->has('preview_featured_image') ? 'is-invalid' : '' }}" type="text" name="preview_featured_image" id="preview_featured_image" value="{{ old('preview_featured_image', $product->preview_featured_image) }}">
-                @if($errors->has('preview_featured_image'))
-                    <div class="invalid-feedback">
-                        {{ $errors->first('preview_featured_image') }}
-                    </div>
-                @endif
-                <span class="help-block">{{ trans('cruds.product.fields.preview_featured_image_helper') }}</span>
-            </div>
-            <div class="form-group">
-                <label for="contact_filters_products_decoration">{{ trans('cruds.product.fields.contact_filters_products_decoration') }}</label>
-                <input class="form-control {{ $errors->has('contact_filters_products_decoration') ? 'is-invalid' : '' }}" type="text" name="contact_filters_products_decoration" id="contact_filters_products_decoration" value="{{ old('contact_filters_products_decoration', $product->contact_filters_products_decoration) }}">
-                @if($errors->has('contact_filters_products_decoration'))
-                    <div class="invalid-feedback">
-                        {{ $errors->first('contact_filters_products_decoration') }}
-                    </div>
-                @endif
-                <span class="help-block">{{ trans('cruds.product.fields.contact_filters_products_decoration_helper') }}</span>
-            </div>
-            <div class="form-group">
-
                 <button class="btn btn-danger" type="submit">
                     {{ trans('global.save') }}
                 </button>
