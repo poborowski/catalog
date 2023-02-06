@@ -423,6 +423,14 @@
                             {{ $product->contact_filters_products_decoration }}
                         </td>
                     </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.product.fields.delete') }}
+                        </th>
+                        <td>
+                            {{ $product->delete }}
+                        </td>
+                    </tr>
                 </tbody>
             </table>
             <div class="form-group">
