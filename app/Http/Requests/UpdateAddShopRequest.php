@@ -16,6 +16,11 @@ class UpdateAddShopRequest extends FormRequest
 
     public function rules()
     {
-        return [];
+        return [
+            'sd' => [
+                'string',
+                'nullable',
+            ],
+        ];
     }
 }

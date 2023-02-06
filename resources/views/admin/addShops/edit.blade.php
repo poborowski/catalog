@@ -31,6 +31,16 @@
                 <span class="help-block">{{ trans('cruds.addShop.fields.password_helper') }}</span>
             </div>
             <div class="form-group">
+                <label for="sd">{{ trans('cruds.addShop.fields.sd') }}</label>
+                <input class="form-control {{ $errors->has('sd') ? 'is-invalid' : '' }}" type="text" name="sd" id="sd" value="{{ old('sd', $addShop->sd) }}">
+                @if($errors->has('sd'))
+                    <div class="invalid-feedback">
+                        {{ $errors->first('sd') }}
+                    </div>
+                @endif
+                <span class="help-block">{{ trans('cruds.addShop.fields.sd_helper') }}</span>
+            </div>
+            <div class="form-group">
                 <button class="btn btn-danger" type="submit">
                     {{ trans('global.save') }}
                 </button>

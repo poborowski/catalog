@@ -29,6 +29,9 @@
                             {{ trans('cruds.addShop.fields.email') }}
                         </th>
                         <th>
+                            {{ trans('cruds.addShop.fields.sd') }}
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -44,6 +47,9 @@
                             </td>
                             <td>
                                 {{ $addShop->email ?? '' }}
+                            </td>
+                            <td>
+                                {{ $addShop->sd ?? '' }}
                             </td>
                             <td>
                                 @can('add_shop_show')
