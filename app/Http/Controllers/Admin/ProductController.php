@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Traits\CsvImportTrait;
+
 use App\Http\Controllers\Traits\MediaUploadingTrait;
+
 
 use App\Http\Requests\MassDestroyProductRequest;
 use App\Http\Requests\StoreProductRequest;
@@ -18,7 +20,9 @@ use Symfony\Component\HttpFoundation\Response;
 class ProductController extends Controller
 {
 
+
     use MediaUploadingTrait;
+
 
     use CsvImportTrait;
 

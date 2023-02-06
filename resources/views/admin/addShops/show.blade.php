@@ -41,10 +41,10 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.addShop.fields.d') }}
+                            {{ trans('cruds.addShop.fields.sd') }}
                         </th>
                         <td>
-                            {{ $addShop->d }}
+                            {{ $addShop->sd }}
                         </td>
                     </tr>
                 </tbody>

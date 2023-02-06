@@ -211,6 +211,12 @@ class StoreProductRequest extends FormRequest
                 'string',
                 'nullable',
             ],
+
+            'delete' => [
+                'string',
+                'nullable',
+            ],
+
         ];
     }
 }
