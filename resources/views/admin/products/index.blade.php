@@ -180,6 +180,9 @@
                             {{ trans('cruds.product.fields.contact_filters_products_decoration') }}
                         </th>
                         <th>
+                            {{ trans('cruds.product.fields.delete') }}
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -344,6 +347,9 @@
                             </td>
                             <td>
                                 {{ $product->contact_filters_products_decoration ?? '' }}
+                            </td>
+                            <td>
+                                {{ $product->delete ?? '' }}
                             </td>
                             <td>
                                 @can('product_show')
