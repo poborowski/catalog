@@ -195,6 +195,22 @@ class UpdateProductRequest extends FormRequest
                 'string',
                 'nullable',
             ],
+            'actual_product_url' => [
+                'string',
+                'nullable',
+            ],
+            'featured_img' => [
+                'string',
+                'nullable',
+            ],
+            'preview_featured_image' => [
+                'string',
+                'nullable',
+            ],
+            'contact_filters_products_decoration' => [
+                'string',
+                'nullable',
+            ],
         ];
     }
 }
