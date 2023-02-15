@@ -165,6 +165,92 @@ table.dataTable thead .sorting_desc {
     flex-wrap: wrap;
 }
 
+.chooseShop a {
+    color: #fff;
+    background-color: #e55353;
+    border-color: #e55353;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: .875rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    margin-bottom: 30px;
+    display: inline-block;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+table.dataTable thead .sorting,
+table.dataTable thead .sorting_asc,
+table.dataTable thead .sorting_desc {
+    display: block;
+    width: 400px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600;700&display=swap');
+
+
+
+h1 {
+    width: 60%;
+    margin: 5% auto;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 55px;
+    font-weight: 700;
+
+}
+
+.accordion {
+
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+
+    border-radius: 12px;
+    margin: 10px 10px 10px 0px;
+    text-align: left;
+    outline: none;
+    font-size: 25px;
+    font-weight: 600;
+
+    transition: 0.4s;
+}
+
+.arrowup {
+
+    width: 24px;
+    height: auto;
+    float: right;
+    transform: rotate(180deg);
+}
+
+
+.panel {
+    padding: 0 15px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+}
+
+.accordionsection {
+
+    margin: 0 auto;
+    background: #fff;
+
+    padding: 15px;
+
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    .accordion {
+        font-size: 15px;
+    }
+}
+
 .editProduct .accordionsection {
     width: 90%;
 }
@@ -205,4 +291,108 @@ table.dataTable thead .sorting_desc {
 
 .saveproduct .fixedbutton {
     position: fixed;
+}
+
+.productimg img {
+    max-width: 40px;
+}
+
+.editcard {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.editcard .card-body {
+    width: 86%;
+}
+
+.editcard .saveedit {
+    width: 14%;
+
+
+}
+
+.editcard .saveedit button {
+    width: 10%;
+    display: block;
+    margin: 0 auto;
+    background-color: #302836 !important;
+    border: 0px;
+    position: fixed;
+    margin-top: 20px;
+}
+
+.editcard .card-header {
+    width: 100%;
+}
+
+/* .dataTables_scrollHeadInner tr {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+} */
+
+.indexproducts th {
+    display: none !important;
+}
+
+.indexproducts th:nth-child(25),
+.indexproducts th:nth-child(6),
+
+.indexproducts th:nth-child(2) {
+    display: inline-block !important;
+}
+
+.indexproducts td {
+    display: none !important;
+}
+
+.indexproducts td:nth-child(25),
+.indexproducts td:nth-child(6),
+.indexproducts td:nth-child(1),
+.indexproducts td:nth-child(2),
+.indexproducts td:last-child {
+    display: inline-block !important;
+    border: 0px;
+}
+
+.indexproducts td:last-child {
+    float: right;
+}
+
+/* .indexproducts tbody {
+    flex-wrap: wrap;
+    display: flex;
+    width: 100%;
+} */
+.logob2wed svg {
+    max-width: 150px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.chooseShop a {
+    text-transform: uppercase;
+    color: #302836;
+    font-weight: 700;
+    line-height: 19px;
+    font-size: 15px;
+    font-family: inherit;
+    padding: 16px 20px 21px 20px;
+    margin: 0;
+    border: 0;
+    background-color: #fff;
+    border-bottom: 1px solid #dbdadc;
+    cursor: pointer;
+
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+    border: 1px solid #dbdadc;
+    border-bottom: 0;
+}
+
+.chooseShop a:hover {
+    background: #302836;
+    color: white;
 }

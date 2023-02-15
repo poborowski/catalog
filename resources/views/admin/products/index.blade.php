@@ -17,8 +17,8 @@
     <div class="card-header">
         {{ trans('cruds.product.title_singular') }} {{ trans('global.list') }}
     </div>
-
-    <div class="card-body">
+    @dd($products)
+    <div class="card-body indexproducts">
         <div class="table-responsive">
             <table class=" table table-bordered table-striped table-hover datatable datatable-Product">
                 <thead>
@@ -29,6 +29,7 @@
                         <th>
                             {{ trans('cruds.product.fields.id') }}
                         </th>
+          
                         <th>
                             {{ trans('cruds.product.fields.actual_product_url') }}
                         </th>
@@ -205,7 +206,7 @@
                                 {{ $product->id ?? '' }}
                             </td>
                             <td>
-                                {{ $product->actual_product_url ?? '' }}
+                              {{ $product->actual_product_url ?? '' }}
                             </td>
                             <td>
                                 {{ $product->preview_featured_image ?? '' }}
@@ -213,8 +214,8 @@
                             <td>
                                 {{ $product->contact_filters_products_decoration ?? '' }}
                             </td>
-                            <td>
-                                {{ $product->featured_img ?? '' }}
+                            <td class="productimg">
+                            <img src="{{ $product->featured_img ?? '' }}">
                             </td>
                             <td>
                                 {{ $product->api ?? '' }}

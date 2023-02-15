@@ -37,4 +37,8 @@ class AddShop extends Model
     {
         return $date->format('Y-m-d H:i:s');
     }
+    public function products()
+    {
+        return $this->belongsToMany(Product::class, 'add_shops_products', 'add_shops_id', 'products_id');
+    }
 }

@@ -1,5 +1,13 @@
 @extends('layouts.admin')
 @section('content')
+<div class="chooseShop">
+    <a href="/first">Pierwszy sklep</a>
+    <a href="/first">Drugi sklep</a>
+    <a href="/first">Trzeci sklep</a>
+</div>
+
+@dd($products)
+
 
 <div class="card">
     <div class="card-header">
@@ -13,8 +21,9 @@
                     {{ trans('global.back_to_list') }}
                 </a>
             </div>
-            <table class="table table-bordered table-striped">
+            <table class="table table-bordered table-striped editProduct">
                 <tbody>
+
                     <tr>
                         <th>
                             {{ trans('cruds.product.fields.id') }}
@@ -175,6 +184,8 @@
                             {{ $product->attach_additional_product }}
                         </td>
                     </tr>
+
+
                     <tr>
                         <th>
                             {{ trans('cruds.product.fields.disable_from_delivery') }}
@@ -263,6 +274,7 @@
                             {{ $product->tags }}
                         </td>
                     </tr>
+
                     <tr>
                         <th>
                             {{ trans('cruds.product.fields.filters_product_style') }}

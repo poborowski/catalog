@@ -20,9 +20,12 @@ class ProductController extends Controller
     {
         abort_if(Gate::denies('product_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $products = Product::all();
-
-        return view('admin.products.index', compact('products'));
+        $productsModel = Product::all();
+        $products = (object)$productsModel; 
+        // $products = json_decode(json_encode($productsModel), FALSE);
+        dd($products);
+        // return view('admin.products.index', compact('products'));
+        return view('admin.products.index', ['products'=> $products] );
     }
 
     public function create()
